@@ -1,5 +1,7 @@
 const saveBtn9am = document.getElementsByClassName('btn saveBtn col-2 col-md-1');
 const input9am = document.getElementById('fas fa-save');
+//make sure to do the other inputs too
+
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -8,8 +10,8 @@ const input9am = document.getElementById('fas fa-save');
 // looking to save the input data in DOM. definitely need to appendChild, but where to after that?
 
 
-  $(function () {
-  }
+  $(document).ready(function() {
+  
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -33,7 +35,7 @@ saveBtn11am.addEventListener('click',function() {
     const input11am = inputField.value;
     localStorage.setItem('fas fa-save', input11am);
   });
-  
+});
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
@@ -57,7 +59,6 @@ saveBtn11am.addEventListener('click',function() {
   setInterval(updateClock, 1000);
   
   console.log();
-});
 
 
 //var 9am = document.getElementById("hour-9");
