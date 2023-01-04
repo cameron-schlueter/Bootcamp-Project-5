@@ -6,8 +6,11 @@ const input10am = document.getElementById('hour-10');
 
 const saveBtn11am = document.getElementsByClassName('row time-block future');
 const input11am = document.getElementById('hour-11');
-//make sure to do the other inputs too
 
+// This fits in here somewhere but I don't know how and don't really know what it does, but I remember prof saying we have to append.
+//var 9am = document.getElementById("hour-9");
+ // document.body.appendChild(9am);
+ // var data = 9am.getElementById("hour-9");
 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
@@ -15,7 +18,7 @@ const input11am = document.getElementById('hour-11');
 
 // looking to save the input data in DOM. definitely need to appendChild, but where to after that?
 
-
+//this is the start of wrapping the code in a call to jQuery
 $(document).ready(function() {
   
   // TODO: Add a listener for click events on the save button. This code should
@@ -42,6 +45,9 @@ $saveBtn11am.addEventListener('click',function() {
     localStorage.setItem('fas fa-save', input11am);
   });
 });
+
+
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
